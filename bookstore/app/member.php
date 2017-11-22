@@ -12,6 +12,6 @@ class MemBer extends Model
 
     public function bookrent()
     {
-        return $this->belongsTo('App\BookRent');
+        return $this->hasMany('App\BookRent');
     }
 }

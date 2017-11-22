@@ -11,6 +11,10 @@ class BookDetail extends Model
 
     public function author()
     {
-        return $this->belongsTo('App\Author');
+        return $this->hasMany('App\Author');
+    }
+    public function Category()
+    {
+        return $this->hasMany('App\BookCategory');
     }
 }
