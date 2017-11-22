@@ -4,13 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class bookrent extends Model
+class BookRent extends Model
 {
     protected $table = 'bookrent';
-    protected $fillable = ['bookrentID','bookID','memberID','rent_date','return_date','status','total_cost'];
+    protected $fillable = ['bookrent_ID','book_ID','member_ID','rent_date','return_date','status','total_cost'];
 
-    public function post()
+    public function books()
     {
-        return $this->belongsTo('App\Post');
+        return $this->belongsTo('App\Books');
+    }
+    public function member()
+    {
+        return $this->hasMany('App\MemBer');
     }
 }

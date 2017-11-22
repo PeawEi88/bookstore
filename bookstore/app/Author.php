@@ -9,8 +9,8 @@ class Author extends Model
     protected $table = 'Author';
     protected $fillable = ['authorID','first_name','last_name','email','birth_date','gender','image'];
 
-    public function post()
+    public function bookdetail()
     {
-        return $this->belongsTo('App\Post');
+        return $this->hasMany('App\BookDetail');
     }
 }

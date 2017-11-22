@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class bookdetail extends Model
+class BookDetail extends Model
 {
     protected $table = 'bookdetail';
-    protected $fillable = ['bookdetailID','title','bookcategoryID','authorID','price_per_dau','description','cover_image'];
+    protected $fillable = ['bookdetail_ID','title','bookcategory_ID','author_ID','price_per_dau','description','cover_image'];
 
-    public function post()
+    public function author()
     {
-        return $this->belongsTo('App\Post');
+        return $this->belongsTo('App\Author');
     }
 }
